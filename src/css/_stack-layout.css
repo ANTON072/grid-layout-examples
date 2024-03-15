@@ -1,0 +1,5 @@
+.vertical {
+  display: grid;
+  gap: 24px;
+  align-content: start;
+}
