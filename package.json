@@ -2,7 +2,8 @@
   "name": "grid-layout-examples",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "format": "prettier --write ./src"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

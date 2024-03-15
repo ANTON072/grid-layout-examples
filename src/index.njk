@@ -1,15 +1,56 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/assets/reset.css" />
-  <link rel="stylesheet" href="/assets/base.css" />
-  <link rel="stylesheet" href="/css/style.css" />
-</head>
-<body>
-  <h1>Hello World.</h1>
-  <script src="/assets/base.js"></script>
-</body>
-</html>
+---
+layout: layout
+title: Grid Layout Examples
+---
+<style>
+  h1 {
+    margin-right: 40px;
+    margin-left: 40px;
+    font-size: 24px;
+  }
+  section {
+    padding-block: 160px 80px;
+  }
+  dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-right: 40px;
+    margin-left: 40px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    line-height: 2;
+    overflow: hidden;
+  }
+  dd:first-of-type,
+  dd a,
+  dt {
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+
+  }
+  dd a:hover {
+    text-decoration: underline;
+  }
+  dd:nth-of-type(odd),
+  dt:nth-of-type(odd) {
+    background-color: #ddd;
+  }
+</style>
+
+<section>
+  <h1>Grid Layout Examples</h1>
+  <dl>
+    <dt>ページ名</dt>
+    <dd>ページURL</dd>
+    {%- for item in collections.all -%}
+    <dt>
+      {{ item.data.title }}
+    </dt>
+    <dd>
+      <a href="{{ item.url }}">{{ item.url }}</a>
+    </dd>
+    {%- endfor -%}
+  </dl>
+</section>

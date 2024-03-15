@@ -4,7 +4,7 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.setNunjucksEnvironmentOptions({
     throwOnUndefined: true,
-    autoescape: true,
+    autoescape: false,
   });
 
   return {

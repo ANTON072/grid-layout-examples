@@ -10,5 +10,9 @@
   "[nunjucks]": {
     "editor.wordWrapColumn": 100,
     "editor.wordWrap": "bounded"
+  },
+  "files.associations": {
+    "*.svg": "html",
+    "*.njk": "html"
   }
 }
