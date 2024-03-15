@@ -3,3 +3,12 @@
   gap: 24px;
   align-content: start;
 }
+
+.horizontal {
+  display: grid;
+  /* 自動で列が増える */
+  grid-auto-flow: column;
+  gap: 24px;
+  /* アイテムの間隔が広くなるのを防ぐ */
+  justify-content: start;
+}
