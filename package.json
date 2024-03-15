@@ -1,0 +1,11 @@
+{
+  "name": "grid-layout-examples",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "prettier": "3.2.5"
+  }
+}
