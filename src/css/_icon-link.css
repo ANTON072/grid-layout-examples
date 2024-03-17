@@ -1,0 +1,82 @@
+.with-icon-vertical {
+  display: grid;
+  justify-items: center;
+  font-size: 12px;
+}
+
+.with-icon-horizontal {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.with-icon-double {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.with-icon-auto {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-auto-flow: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.menu-vertical {
+  display: grid;
+  gap: 16px;
+  /* グリッドアイテムの間隔が指定したガターより広くなるのを防ぐ */
+  align-content: start;
+
+  & a {
+    padding: 8px 12px;
+    border-radius: 8px;
+
+    &.current {
+      background-color: #f1f5f9;
+    }
+
+    &:hover {
+      background-color: #e2e8f0;
+    }
+  }
+
+  .with-icon-vertical {
+    display: grid;
+    justify-items: center;
+    font-size: 12px;
+  }
+
+  .with-icon-auto {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-auto-flow: column;
+    gap: 16px;
+    align-items: center;
+  }
+}
+
+.menu-horizontal {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  gap: 2px;
+  justify-content: start;
+
+  & a {
+    padding: 8px 12px;
+    border-radius: 8px;
+
+    &.current {
+      background-color: #f1f5f9;
+    }
+
+    &:hover {
+      background-color: #e2e8f0;
+    }
+  }
+}
