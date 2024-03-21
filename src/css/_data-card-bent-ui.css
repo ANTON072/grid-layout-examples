@@ -1,0 +1,36 @@
+.datacards-bento {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  /* コンテナクエリの基準にする */
+  container-type: inline-size;
+
+  > * {
+    grid-column: 1 / -1;
+  }
+
+  @container (width >= 480px) {
+    > .type-a {
+      grid-column: span 6;
+    }
+  }
+
+  @container (width >= 960px) {
+    > .type-a {
+      grid-column: span 3;
+    }
+
+    > .type-b {
+      grid-column: span 7;
+      grid-row: span 3;
+    }
+
+    > .type-c {
+      grid-column: span 5;
+    }
+
+    > .type-d {
+      grid-column: span 6;
+    }
+  }
+}
