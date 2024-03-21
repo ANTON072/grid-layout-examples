@@ -14,5 +14,6 @@
   "files.associations": {
     "*.svg": "html",
     "*.njk": "html"
-  }
+  },
+  "cSpell.words": ["datacard"]
 }
