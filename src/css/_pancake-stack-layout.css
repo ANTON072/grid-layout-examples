@@ -1,0 +1,15 @@
+.pancake {
+  display: grid;
+  /* preタグなどが含まれたときに画面からオーバーフローしてレイアウトが崩れるのを防ぐ */
+  grid-template-columns: minmax(0, auto);
+  grid-template-rows: auto 1fr auto;
+  height: 100svh;
+
+  > .main {
+    display: grid;
+    grid-template-columns: minmax(0, 640px);
+    justify-content: center;
+    overflow-y: auto;
+    padding: 16px 16px 80px;
+  }
+}
