@@ -1,0 +1,51 @@
+.fullbleed {
+  display: grid;
+  grid-template-columns: minmax(16px, 1fr) minmax(auto, 1120px) minmax(
+      16px,
+      1fr
+    );
+
+  > * {
+    grid-column: 1 / -1;
+  }
+
+  > .main {
+    display: grid;
+    grid-template-columns: subgrid;
+
+    > * {
+      grid-column: 2 / -2;
+    }
+
+    > .section-01 {
+      grid-column: 1 / -1;
+      grid-template-columns: subgrid;
+
+      > * {
+        grid-column: 2 / -2;
+      }
+
+      > .decoration {
+        justify-self: center;
+        align-self: end;
+        position: absolute;
+        transform: translateY(50%);
+      }
+    }
+
+    > .section-03-align {
+      grid-column: 1 / -1;
+      grid-template-columns: subgrid;
+    }
+  }
+}
+
+.section-twocolumns {
+  display: grid;
+  grid-template-columns: minmax(0, auto) 300px;
+  gap: 64px 48px;
+
+  @media (width <= 800px) {
+    grid-template-columns: minmax(0, auto);
+  }
+}
